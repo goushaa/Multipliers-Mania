@@ -1,4 +1,4 @@
-module basic_tb();
+module treeMultiplier_tb();
 
   reg clk, reset,enable;
   reg  [31:0] in1,in2;
@@ -6,7 +6,7 @@ module basic_tb();
   integer count;
   parameter maxInt=2147483647,minInt=-2147483648;
   
-  registeredBasic dut (clk,reset,enable,in1,in2,out);
+  registeredTree dut (clk,reset,enable,in1,in2,out);
 
   always #10 clk = ~clk;
   
@@ -30,26 +30,26 @@ module basic_tb();
 	end
 	else $display("TestCase#1 failed with inputs= %d , %d and output= %d expected= %d   ", $signed(in1), $signed(in2), $signed(out), $signed(-25));
 
-    in1 = 5;
+    in1 = 4;
     in2 = 10;
     #80;
-	if(out === 50 ) begin
+	if(out === 40 ) begin
 		$display("TestCase#2 Success");
 		count = count + 1 ;
 	end
-	else $display("TestCase#2 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(25));
+	else $display("TestCase#2 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(40));
 
-    in1 = -5;
-    in2 = -20;
+    in1 = -4;
+    in2 = -10;
     #80;
-	if(out === 100 ) begin
+	if(out === 40 ) begin
 		$display("TestCase#3 Success");
 		count = count + 1 ;
 	end
-	else $display("TestCase#3 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(100));
+	else $display("TestCase#3 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(40));
 
     in1 = 0;
-    in2 = 50;
+    in2 = 3;
     #80;
 	if(out === 0 ) begin
 		$display("TestCase#4 Success");
@@ -58,44 +58,44 @@ module basic_tb();
 	else $display("TestCase#4 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(0));
 
     in1 = 1;
-    in2 = 50;
+    in2 = 3;
     #80;
-	if(out === 50 ) begin
+	if(out === 3 ) begin
 		$display("TestCase#5 Success");
 		count = count + 1 ;
 	end
-	else $display("TestCase#5 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(50));
+	else $display("TestCase#5 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(3));
 
-    in1 = 20;
-    in2 = 30;
+    in1 = 3;
+    in2 = 7;
 
     #80;
-	if(out === 600 ) begin
+	if(out === 21 ) begin
 		$display("TestCase#6 Success");
 		count = count + 1 ;
 	end
-	else $display("TestCase#6 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out),$signed(600));
+	else $display("TestCase#6 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out),$signed(21));
 
-    in1 = 30;
-    in2 = -30;
+    in1 = 2;
+    in2 = -2;
 
     #80;
-	if(out === -900 ) begin
+	if(out === -4 ) begin
 		$display("TestCase#7 Success");
 		count = count + 1 ;
 	end
-	else $display("TestCase#7 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(-900));
+	else $display("TestCase#7 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(-4));
 
 
-    in1 = 10;
-    in2 = 10;
+    in1 = 5;
+    in2 = 7;
 
     #80;
-	if(out === 100 ) begin
+	if(out === 35 ) begin
 		$display("TestCase#8 Success");
 		count = count + 1 ;
 	end
-	else $display("TestCase#8 failed with inputs= %d , %d and output= %d ", $signed(in1), $signed(in2), $signed(out), $signed(100));
+	else $display("TestCase#8 failed with inputs= %d , %d and output= %d ", $signed(in1), $signed(in2), $signed(out), $signed(35));
 
     in1 = 0;
     in2 = 0;
@@ -106,14 +106,14 @@ module basic_tb();
 	end
 	else $display("TestCase#9 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(0));
 
-    in1 = 100;
-    in2 = 100;
+    in1 = 7;
+    in2 = 7;
     #80;
-	if(out === 10000 ) begin
+	if(out === 49 ) begin
 		$display("TestCase#10 Success");
 		count = count + 1 ;
 	end
-	else $display("TestCase#10 failed with inputs= %d , %d and output= %d ", $signed(in1), $signed(in2), $signed(out), $signed(10000));
+	else $display("TestCase#10 failed with inputs= %d , %d and output= %d ", $signed(in1), $signed(in2), $signed(out), $signed(49));
     enable=0;
 
 	$display("--------------------- %d   passed testcases out of 10   ---------------------", count);

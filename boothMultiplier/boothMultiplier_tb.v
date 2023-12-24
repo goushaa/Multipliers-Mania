@@ -1,4 +1,4 @@
-module basic_tb();
+module booth_tb();
 
   reg clk, reset,enable;
   reg  [31:0] in1,in2;
@@ -6,7 +6,7 @@ module basic_tb();
   integer count;
   parameter maxInt=2147483647,minInt=-2147483648;
   
-  registeredBasic dut (clk,reset,enable,in1,in2,out);
+  registeredBooth dut (clk,reset,enable,in1,in2,out);
 
   always #10 clk = ~clk;
   
@@ -46,7 +46,7 @@ module basic_tb();
 		$display("TestCase#3 Success");
 		count = count + 1 ;
 	end
-	else $display("TestCase#3 failed with inputs= %d , %d and output= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(100));
+	else $display("TestCase#3 failed with inputs= %d , %d and output= %d and overflow= %d expected= %d", $signed(in1), $signed(in2), $signed(out), $signed(overflow), $signed(100));
 
     in1 = 0;
     in2 = 50;

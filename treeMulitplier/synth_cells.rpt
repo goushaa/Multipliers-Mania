@@ -1,9 +1,9 @@
  
 ****************************************
 Report : cell
-Design : registeredBooth
+Design : registeredTree
 Version: U-2022.12-SP7
-Date   : Sun Dec 24 17:50:38 2023
+Date   : Sun Dec 24 19:12:00 2023
 ****************************************
 
 Attributes:
@@ -16,12 +16,12 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-AB                        genericRegister_N64             2482.790362
+AB                        genericRegister_N64             2433.023961
                                                                     h, n, p
-boothMult                 boothMultiplier                 132763.854089
-                                                                    h
 finalOutput               genericRegister_N65             2464.358360
                                                                     h, n, p
+treeMult                  treeMultiplier                  35926.733419
+                                                                    h
 --------------------------------------------------------------------------------
-Total 3 cells                                             137711.002812
+Total 3 cells                                             40824.115741
 1

@@ -1,9 +1,9 @@
  
 ****************************************
 Report : cell
-Design : registeredBooth
+Design : SequentialAll
 Version: U-2022.12-SP7
-Date   : Sun Dec 24 17:50:38 2023
+Date   : Sun Dec 24 19:01:43 2023
 ****************************************
 
 Attributes:
@@ -16,12 +16,14 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-AB                        genericRegister_N64             2482.790362
-                                                                    h, n, p
-boothMult                 boothMultiplier                 132763.854089
+Multiplier                sequential                      75207.168649
                                                                     h
-finalOutput               genericRegister_N65             2464.358360
+regmultiplicand           registerNbits_N32_2             1043.251186
+                                                                    h, n, p
+regmultiplier             registerNbits_N32_3             1043.251186
+                                                                    h, n, p
+regresult                 registerNbits_N64               2103.091173
                                                                     h, n, p
 --------------------------------------------------------------------------------
-Total 3 cells                                             137711.002812
+Total 4 cells                                             79396.762195
 1
