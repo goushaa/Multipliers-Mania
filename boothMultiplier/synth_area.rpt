@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : boothMultiplier
+Version: U-2022.12-SP7
+Date   : Sun Dec 24 13:04:41 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed90nm_typ_ht (File: /home/user29/Kady/ref/models/saed90nm_typ_ht.db)
+
+Number of ports:                          390
+Number of nets:                          1658
+Number of cells:                         1335
+Number of combinational cells:           1168
+Number of sequential cells:               162
+Number of macros/black boxes:               0
+Number of buf/inv:                        261
+Number of references:                      18
+
+Combinational area:               8685.158498
+Buf/Inv area:                     1466.265636
+Noncombinational area:            4031.078350
+Macro/Black Box area:                0.000000
+Net Interconnect area:             679.529036
+
+Total cell area:                 12716.236848
+Total area:                      13395.765885
+1

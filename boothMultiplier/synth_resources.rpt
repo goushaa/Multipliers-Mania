@@ -1,0 +1,33 @@
+ 
+****************************************
+Report : resources
+Design : boothMultiplier
+Version: U-2022.12-SP7
+Date   : Sun Dec 24 13:04:41 2023
+****************************************
+
+Resource Sharing Report for design boothMultiplier in file
+        ./source/boothMultiplier.v
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r64      | DW01_cmp2    | width=32   |               | gt_21                |
+| r66      | DW01_add     | width=32   |               | add_24               |
+| r68      | DW01_sub     | width=32   |               | sub_27               |
+| r70      | DW01_dec     | width=32   |               | sub_35               |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| sub_35             | DW01_dec         | cla                |                |
+| add_24             | DW01_add         | cla                |                |
+| sub_27             | DW01_sub         | cla                |                |
+===============================================================================
+
+1

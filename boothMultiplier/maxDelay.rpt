@@ -1,0 +1,570 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : boothMultiplier
+Version: U-2022.12-SP7
+Date   : Sun Dec 24 13:04:41 2023
+****************************************
+
+Operating Conditions: TYPICAL   Library: saed90nm_typ_ht
+Wire Load Model Mode: enclosed
+
+  Startpoint: Acc_reg[5] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[30]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_add_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[5]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[5]/Q (DFFX1)                                    0.31       0.31 f
+  add_24/A[5] (boothMultiplier_DW01_add_1)                0.00       0.31 f
+  add_24/U37/Q (OR2X1)                                    0.17       0.48 f
+  add_24/U64/ZN (INVX0)                                   0.10       0.58 r
+  add_24/U261/QN (NOR2X0)                                 0.11       0.70 f
+  add_24/U262/QN (NAND2X0)                                0.13       0.83 r
+  add_24/U281/QN (NOR2X0)                                 0.12       0.95 f
+  add_24/U332/QN (NAND3X0)                                0.12       1.06 r
+  add_24/U310/QN (NAND2X0)                                0.10       1.16 f
+  add_24/U297/QN (NOR2X0)                                 0.13       1.29 r
+  add_24/U59/QN (NAND2X0)                                 0.12       1.41 f
+  add_24/U54/QN (NAND2X0)                                 0.10       1.51 r
+  add_24/U55/Q (AND2X1)                                   0.14       1.65 r
+  add_24/U26/QN (NAND2X1)                                 0.11       1.76 f
+  add_24/U41/Q (OR2X1)                                    0.14       1.90 f
+  add_24/U39/Q (AND2X1)                                   0.14       2.03 f
+  add_24/U28/QN (NAND2X0)                                 0.10       2.13 r
+  add_24/U29/Q (AND2X1)                                   0.13       2.26 r
+  add_24/U299/QN (NAND2X0)                                0.09       2.35 f
+  add_24/U318/Q (XOR3X1)                                  0.18       2.54 r
+  add_24/SUM[31] (boothMultiplier_DW01_add_1)             0.00       2.54 r
+  U415/Q (AO22X1)                                         0.15       2.69 r
+  U344/Q (AO221X1)                                        0.16       2.84 r
+  Acc_reg[30]/D (DFFX1)                                   0.03       2.88 r
+  data arrival time                                                  2.88
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[30]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: Acc_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[27]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_sub_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[9]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[9]/Q (DFFX1)                                    0.29       0.29 f
+  sub_27/A[9] (boothMultiplier_DW01_sub_1)                0.00       0.29 f
+  sub_27/U383/ZN (INVX0)                                  0.08       0.38 r
+  sub_27/U6/QN (NAND2X1)                                  0.12       0.50 f
+  sub_27/U339/QN (NAND2X0)                                0.11       0.61 r
+  sub_27/U188/QN (NOR2X0)                                 0.14       0.75 f
+  sub_27/U384/QN (NAND2X0)                                0.12       0.87 r
+  sub_27/U368/QN (NOR2X0)                                 0.10       0.97 f
+  sub_27/U363/QN (NAND2X0)                                0.10       1.07 r
+  sub_27/U354/QN (NAND2X0)                                0.10       1.17 f
+  sub_27/U345/QN (NOR2X0)                                 0.11       1.27 r
+  sub_27/U249/QN (NAND2X0)                                0.10       1.37 f
+  sub_27/U100/QN (NAND2X0)                                0.12       1.49 r
+  sub_27/U101/Q (AND2X1)                                  0.15       1.64 r
+  sub_27/U64/QN (NAND2X0)                                 0.09       1.73 f
+  sub_27/U65/QN (NAND2X0)                                 0.12       1.84 r
+  sub_27/U43/QN (NAND2X0)                                 0.12       1.96 f
+  sub_27/U4/QN (NAND2X1)                                  0.12       2.08 r
+  sub_27/U59/QN (NAND2X0)                                 0.10       2.18 f
+  sub_27/U60/QN (NAND2X0)                                 0.09       2.27 r
+  sub_27/U372/QN (NAND2X0)                                0.09       2.37 f
+  sub_27/U213/Q (XOR3X1)                                  0.18       2.55 r
+  sub_27/DIFF[28] (boothMultiplier_DW01_sub_1)            0.00       2.55 r
+  U421/Q (AO22X1)                                         0.14       2.69 r
+  U422/Q (AO221X1)                                        0.16       2.84 r
+  Acc_reg[27]/D (DFFX1)                                   0.03       2.88 r
+  data arrival time                                                  2.88
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[27]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: Acc_reg[6] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[23]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_add_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[6]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[6]/QN (DFFX1)                                   0.21       0.21 f
+  U369/ZN (INVX0)                                         0.10       0.31 r
+  add_24/A[6] (boothMultiplier_DW01_add_1)                0.00       0.31 r
+  add_24/U166/Q (OR2X1)                                   0.17       0.48 r
+  add_24/U290/ZN (INVX0)                                  0.10       0.58 f
+  add_24/U270/QN (NOR2X0)                                 0.10       0.68 r
+  add_24/U262/QN (NAND2X0)                                0.12       0.80 f
+  add_24/U281/QN (NOR2X0)                                 0.12       0.92 r
+  add_24/U332/QN (NAND3X0)                                0.11       1.03 f
+  add_24/U310/QN (NAND2X0)                                0.10       1.12 r
+  add_24/U297/QN (NOR2X0)                                 0.12       1.25 f
+  add_24/U59/QN (NAND2X0)                                 0.12       1.36 r
+  add_24/U61/QN (NAND2X0)                                 0.10       1.47 f
+  add_24/U68/QN (NAND2X0)                                 0.11       1.58 r
+  add_24/U309/QN (NAND2X0)                                0.10       1.68 f
+  add_24/U306/QN (NAND2X0)                                0.11       1.79 r
+  add_24/U301/QN (NAND2X0)                                0.10       1.89 f
+  add_24/U294/QN (NAND2X0)                                0.11       2.00 r
+  add_24/U295/QN (NAND2X0)                                0.10       2.10 f
+  add_24/U293/QN (NAND2X0)                                0.11       2.22 r
+  add_24/U292/QN (NAND2X0)                                0.10       2.32 f
+  add_24/U15/Q (AND2X1)                                   0.15       2.47 f
+  add_24/U323/Q (XOR2X1)                                  0.18       2.64 r
+  add_24/SUM[24] (boothMultiplier_DW01_add_1)             0.00       2.64 r
+  U430/Q (AO221X1)                                        0.17       2.82 r
+  Acc_reg[23]/D (DFFX1)                                   0.03       2.85 r
+  data arrival time                                                  2.85
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[23]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: Acc_reg[5] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_add_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[5]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[5]/Q (DFFX1)                                    0.31       0.31 f
+  add_24/A[5] (boothMultiplier_DW01_add_1)                0.00       0.31 f
+  add_24/U37/Q (OR2X1)                                    0.17       0.48 f
+  add_24/U64/ZN (INVX0)                                   0.10       0.58 r
+  add_24/U261/QN (NOR2X0)                                 0.11       0.70 f
+  add_24/U262/QN (NAND2X0)                                0.13       0.83 r
+  add_24/U281/QN (NOR2X0)                                 0.12       0.95 f
+  add_24/U332/QN (NAND3X0)                                0.12       1.06 r
+  add_24/U310/QN (NAND2X0)                                0.10       1.16 f
+  add_24/U297/QN (NOR2X0)                                 0.13       1.29 r
+  add_24/U59/QN (NAND2X0)                                 0.12       1.41 f
+  add_24/U54/QN (NAND2X0)                                 0.10       1.51 r
+  add_24/U55/Q (AND2X1)                                   0.14       1.65 r
+  add_24/U26/QN (NAND2X1)                                 0.11       1.76 f
+  add_24/U41/Q (OR2X1)                                    0.14       1.90 f
+  add_24/U39/Q (AND2X1)                                   0.14       2.03 f
+  add_24/U28/QN (NAND2X0)                                 0.10       2.13 r
+  add_24/U29/Q (AND2X1)                                   0.13       2.26 r
+  add_24/U299/QN (NAND2X0)                                0.09       2.35 f
+  add_24/U318/Q (XOR3X1)                                  0.18       2.54 r
+  add_24/SUM[31] (boothMultiplier_DW01_add_1)             0.00       2.54 r
+  U312/Q (AO22X1)                                         0.15       2.68 r
+  U324/Q (AO21X1)                                         0.13       2.82 r
+  Acc_reg[31]/D (DFFX1)                                   0.03       2.85 r
+  data arrival time                                                  2.85
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[31]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: Acc_reg[5] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[29]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_add_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[5]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[5]/Q (DFFX1)                                    0.31       0.31 f
+  add_24/A[5] (boothMultiplier_DW01_add_1)                0.00       0.31 f
+  add_24/U37/Q (OR2X1)                                    0.17       0.48 f
+  add_24/U64/ZN (INVX0)                                   0.10       0.58 r
+  add_24/U261/QN (NOR2X0)                                 0.11       0.70 f
+  add_24/U262/QN (NAND2X0)                                0.13       0.83 r
+  add_24/U281/QN (NOR2X0)                                 0.12       0.95 f
+  add_24/U332/QN (NAND3X0)                                0.12       1.06 r
+  add_24/U310/QN (NAND2X0)                                0.10       1.16 f
+  add_24/U297/QN (NOR2X0)                                 0.13       1.29 r
+  add_24/U59/QN (NAND2X0)                                 0.12       1.41 f
+  add_24/U54/QN (NAND2X0)                                 0.10       1.51 r
+  add_24/U55/Q (AND2X1)                                   0.14       1.65 r
+  add_24/U26/QN (NAND2X1)                                 0.11       1.76 f
+  add_24/U41/Q (OR2X1)                                    0.14       1.90 f
+  add_24/U39/Q (AND2X1)                                   0.14       2.03 f
+  add_24/U308/QN (NAND2X0)                                0.10       2.13 r
+  add_24/U219/QN (NAND2X0)                                0.11       2.24 f
+  add_24/U305/QN (NAND2X0)                                0.11       2.35 r
+  add_24/U300/QN (NAND2X0)                                0.10       2.45 f
+  add_24/U60/Q (XOR3X1)                                   0.18       2.62 r
+  add_24/SUM[30] (boothMultiplier_DW01_add_1)             0.00       2.62 r
+  U418/Q (AO221X1)                                        0.17       2.80 r
+  Acc_reg[29]/D (DFFX1)                                   0.03       2.83 r
+  data arrival time                                                  2.83
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[29]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: Acc_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_sub_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[9]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[9]/Q (DFFX1)                                    0.29       0.29 f
+  sub_27/A[9] (boothMultiplier_DW01_sub_1)                0.00       0.29 f
+  sub_27/U383/ZN (INVX0)                                  0.08       0.38 r
+  sub_27/U6/QN (NAND2X1)                                  0.12       0.50 f
+  sub_27/U339/QN (NAND2X0)                                0.11       0.61 r
+  sub_27/U188/QN (NOR2X0)                                 0.14       0.75 f
+  sub_27/U384/QN (NAND2X0)                                0.12       0.87 r
+  sub_27/U368/QN (NOR2X0)                                 0.10       0.97 f
+  sub_27/U363/QN (NAND2X0)                                0.10       1.07 r
+  sub_27/U354/QN (NAND2X0)                                0.10       1.17 f
+  sub_27/U345/QN (NOR2X0)                                 0.11       1.27 r
+  sub_27/U249/QN (NAND2X0)                                0.10       1.37 f
+  sub_27/U100/QN (NAND2X0)                                0.12       1.49 r
+  sub_27/U101/Q (AND2X1)                                  0.15       1.64 r
+  sub_27/U64/QN (NAND2X0)                                 0.09       1.73 f
+  sub_27/U65/QN (NAND2X0)                                 0.12       1.84 r
+  sub_27/U43/QN (NAND2X0)                                 0.12       1.96 f
+  sub_27/U4/QN (NAND2X1)                                  0.12       2.08 r
+  sub_27/U50/QN (NAND2X0)                                 0.10       2.18 f
+  sub_27/U51/QN (NAND2X0)                                 0.11       2.29 r
+  sub_27/U388/Q (XOR2X1)                                  0.20       2.49 r
+  sub_27/DIFF[27] (boothMultiplier_DW01_sub_1)            0.00       2.49 r
+  U423/Q (AO22X1)                                         0.14       2.63 r
+  U424/Q (AO221X1)                                        0.16       2.78 r
+  Acc_reg[26]/D (DFFX1)                                   0.03       2.82 r
+  data arrival time                                                  2.82
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[26]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.82
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: count_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: count_reg[29]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_dec_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  count_reg[4]/CLK (DFFX1)                                0.00       0.00 r
+  count_reg[4]/Q (DFFX1)                                  0.28       0.28 r
+  sub_35/A[4] (boothMultiplier_DW01_dec_1)                0.00       0.28 r
+  sub_35/U48/ZN (INVX0)                                   0.09       0.38 f
+  sub_35/U49/QN (NAND2X0)                                 0.11       0.48 r
+  sub_35/U26/QN (NOR2X0)                                  0.10       0.58 f
+  sub_35/U2/Q (AND2X1)                                    0.15       0.73 f
+  sub_35/U23/QN (NAND2X1)                                 0.13       0.87 r
+  sub_35/U127/ZN (INVX0)                                  0.09       0.96 f
+  sub_35/U24/QN (NAND2X0)                                 0.12       1.08 r
+  sub_35/U33/ZN (INVX0)                                   0.10       1.18 f
+  sub_35/U45/QN (NAND2X0)                                 0.11       1.30 r
+  sub_35/U34/ZN (INVX0)                                   0.09       1.39 f
+  sub_35/U31/Q (AND2X1)                                   0.14       1.53 f
+  sub_35/U130/QN (NAND2X1)                                0.13       1.66 r
+  sub_35/U128/ZN (INVX0)                                  0.11       1.76 f
+  sub_35/U22/QN (NAND2X0)                                 0.13       1.89 r
+  sub_35/U113/ZN (INVX0)                                  0.11       2.00 f
+  sub_35/U28/Q (AND2X1)                                   0.16       2.17 f
+  sub_35/U8/Q (AND2X1)                                    0.15       2.32 f
+  sub_35/U18/QN (NAND2X0)                                 0.10       2.41 r
+  sub_35/U52/QN (NAND2X0)                                 0.09       2.50 f
+  sub_35/U132/QN (NAND2X0)                                0.10       2.60 r
+  sub_35/SUM[29] (boothMultiplier_DW01_dec_1)             0.00       2.60 r
+  U390/Q (MUX21X1)                                        0.18       2.78 r
+  count_reg[29]/D (DFFX1)                                 0.03       2.81 r
+  data arrival time                                                  2.81
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  count_reg[29]/CLK (DFFX1)                               0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: Acc_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_sub_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[9]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[9]/Q (DFFX1)                                    0.29       0.29 f
+  sub_27/A[9] (boothMultiplier_DW01_sub_1)                0.00       0.29 f
+  sub_27/U383/ZN (INVX0)                                  0.08       0.38 r
+  sub_27/U6/QN (NAND2X1)                                  0.12       0.50 f
+  sub_27/U339/QN (NAND2X0)                                0.11       0.61 r
+  sub_27/U188/QN (NOR2X0)                                 0.14       0.75 f
+  sub_27/U384/QN (NAND2X0)                                0.12       0.87 r
+  sub_27/U368/QN (NOR2X0)                                 0.10       0.97 f
+  sub_27/U363/QN (NAND2X0)                                0.10       1.07 r
+  sub_27/U354/QN (NAND2X0)                                0.10       1.17 f
+  sub_27/U345/QN (NOR2X0)                                 0.11       1.27 r
+  sub_27/U249/QN (NAND2X0)                                0.10       1.37 f
+  sub_27/U56/Z (DELLN1X2)                                 0.45       1.82 f
+  sub_27/U57/ZN (INVX0)                                   0.12       1.95 r
+  sub_27/U25/ZN (INVX0)                                   0.09       2.03 f
+  sub_27/U385/QN (NAND2X0)                                0.09       2.12 r
+  sub_27/U382/QN (NAND2X0)                                0.10       2.22 f
+  sub_27/U169/Q (XNOR2X1)                                 0.25       2.47 r
+  sub_27/DIFF[20] (boothMultiplier_DW01_sub_1)            0.00       2.47 r
+  U436/Q (AO22X1)                                         0.14       2.61 r
+  U437/Q (AO221X1)                                        0.16       2.77 r
+  Acc_reg[19]/D (DFFX1)                                   0.03       2.80 r
+  data arrival time                                                  2.80
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[19]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.80
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: Acc_reg[9] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[25]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_sub_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[9]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[9]/Q (DFFX1)                                    0.29       0.29 f
+  sub_27/A[9] (boothMultiplier_DW01_sub_1)                0.00       0.29 f
+  sub_27/U383/ZN (INVX0)                                  0.08       0.38 r
+  sub_27/U6/QN (NAND2X1)                                  0.12       0.50 f
+  sub_27/U339/QN (NAND2X0)                                0.11       0.61 r
+  sub_27/U188/QN (NOR2X0)                                 0.14       0.75 f
+  sub_27/U384/QN (NAND2X0)                                0.12       0.87 r
+  sub_27/U368/QN (NOR2X0)                                 0.10       0.97 f
+  sub_27/U363/QN (NAND2X0)                                0.10       1.07 r
+  sub_27/U354/QN (NAND2X0)                                0.10       1.17 f
+  sub_27/U345/QN (NOR2X0)                                 0.11       1.27 r
+  sub_27/U249/QN (NAND2X0)                                0.10       1.37 f
+  sub_27/U100/QN (NAND2X0)                                0.12       1.49 r
+  sub_27/U101/Q (AND2X1)                                  0.15       1.64 r
+  sub_27/U64/QN (NAND2X0)                                 0.09       1.73 f
+  sub_27/U65/QN (NAND2X0)                                 0.12       1.84 r
+  sub_27/U43/QN (NAND2X0)                                 0.12       1.96 f
+  sub_27/U4/QN (NAND2X1)                                  0.12       2.08 r
+  sub_27/U3/Q (AND2X4)                                    0.20       2.28 r
+  sub_27/U389/Q (XOR2X1)                                  0.19       2.47 r
+  sub_27/DIFF[26] (boothMultiplier_DW01_sub_1)            0.00       2.47 r
+  U425/Q (AO22X1)                                         0.14       2.61 r
+  U426/Q (AO221X1)                                        0.16       2.76 r
+  Acc_reg[25]/D (DFFX1)                                   0.03       2.79 r
+  data arrival time                                                  2.79
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[25]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: Acc_reg[1] (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Acc_reg[14]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  boothMultiplier    16000                 saed90nm_typ_ht
+  boothMultiplier_DW01_sub_1
+                     8000                  saed90nm_typ_ht
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Acc_reg[1]/CLK (DFFX1)                                  0.00       0.00 r
+  Acc_reg[1]/Q (DFFX1)                                    0.29       0.29 r
+  sub_27/A[1] (boothMultiplier_DW01_sub_1)                0.00       0.29 r
+  sub_27/U273/Q (OR2X1)                                   0.19       0.48 r
+  sub_27/U301/QN (NAND3X0)                                0.12       0.60 f
+  sub_27/U264/QN (NOR2X0)                                 0.10       0.70 r
+  sub_27/U373/QN (NOR2X0)                                 0.11       0.81 f
+  sub_27/U355/QN (NAND2X0)                                0.11       0.92 r
+  sub_27/U335/ZN (INVX0)                                  0.09       1.01 f
+  sub_27/U340/QN (NAND2X1)                                0.12       1.13 r
+  sub_27/U293/QN (NAND2X0)                                0.09       1.22 f
+  sub_27/U141/QN (NAND2X0)                                0.13       1.36 r
+  sub_27/U320/QN (NAND2X0)                                0.11       1.46 f
+  sub_27/U140/QN (NAND2X1)                                0.13       1.59 r
+  sub_27/U143/QN (NAND2X0)                                0.10       1.69 f
+  sub_27/U142/QN (NAND2X0)                                0.11       1.81 r
+  sub_27/U145/QN (NAND2X0)                                0.10       1.91 f
+  sub_27/U144/QN (NAND2X0)                                0.13       2.04 r
+  sub_27/U288/QN (NAND2X0)                                0.10       2.14 f
+  sub_27/U146/QN (NAND2X0)                                0.12       2.26 r
+  sub_27/U399/Q (XOR2X1)                                  0.20       2.46 r
+  sub_27/DIFF[15] (boothMultiplier_DW01_sub_1)            0.00       2.46 r
+  U446/Q (AO22X1)                                         0.14       2.60 r
+  U447/Q (AO221X1)                                        0.16       2.75 r
+  Acc_reg[14]/D (DFFX1)                                   0.03       2.79 r
+  data arrival time                                                  2.79
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  Acc_reg[14]/CLK (DFFX1)                                 0.00       3.00 r
+  library setup time                                     -0.12       2.88
+  data required time                                                 2.88
+  --------------------------------------------------------------------------
+  data required time                                                 2.88
+  data arrival time                                                 -2.79
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.09
+
+
+1
